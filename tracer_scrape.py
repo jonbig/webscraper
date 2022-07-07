@@ -13,11 +13,11 @@ driver = webdriver.Chrome(service=s)
 
 driver.get("https://tracer.sos.colorado.gov/PublicSite/homepage.aspx") #goes to tracer homepage
 
-search = driver.find_element_by_id("_ctl0_LeftMenu_hlnkSearch") #clicks "search" and waits 2 seconds"
+search = driver.find_element_by_id("_ctl0_LeftMenu_hlnkSearch") #clicks "search" and waits 5 seconds"
 search.click()
 time.sleep(5)
 
-candidate_search = driver.find_element_by_id("_ctl0_LeftMenu_hlnkSearchCandidates") #clicks candidate search and waits 3 seconds
+candidate_search = driver.find_element_by_id("_ctl0_LeftMenu_hlnkSearchCandidates") #clicks candidate search and waits 5 seconds
 candidate_search.click()
 time.sleep(5)
 
@@ -41,9 +41,7 @@ page_size = Select(driver.find_element_by_id("_ctl0_Content_dgdSearchResults__ct
 page_size.select_by_index(2)
 time.sleep(3)
 
-#new_page = (driver.find_element_by_id("_ctl0_Content_dgdSearchResults__ctl53_dgdSearchResultsPageLink3")) #clicks new page
-#new_page.click()
-#time.sleep(2)
+#Create a list of 50 different ID's corresponding to each of the 50 displayed results. Then iterate through that list with the code below
 
 ids = ["_ctl0_Content_dgdSearchResults__ctl2_lnkCandidate", "_ctl0_Content_dgdSearchResults__ctl3_lnkCandidate", "_ctl0_Content_dgdSearchResults__ctl4_lnkCandidate",
 "_ctl0_Content_dgdSearchResults__ctl5_lnkCandidate", "_ctl0_Content_dgdSearchResults__ctl6_lnkCandidate", "_ctl0_Content_dgdSearchResults__ctl7_lnkCandidate",
