@@ -62,6 +62,8 @@ ids = ["_ctl0_Content_dgdSearchResults__ctl2_lnkCandidate", "_ctl0_Content_dgdSe
 "_ctl0_Content_dgdSearchResults__ctl50_lnkCandidate", "_ctl0_Content_dgdSearchResults__ctl51_lnkCandidate"]
 
 
+#loop through the above list of IDs with the following code:
+
 for id in ids:
     try:
         select_id = (driver.find_element_by_id(id))  # selects the candidate
